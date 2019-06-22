@@ -20,7 +20,7 @@ SwiftEntryKit is a banner presenter library for iOS. It can be used to easily di
 DESC
   s.homepage         = 'https://github.com/williamoj/SwiftEntryKit'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Daniel Huri' => 'huri000@gmail.com' }
+  s.author           = { 'Daniel Huri' => 'williamoj@126.com' }
   s.source           = { :git => 'https://github.com/williamoj/SwiftEntryKit.git', :tag => s.version.to_s }
   s.source_files = 'Source/**/*'
   s.frameworks = 'UIKit'
