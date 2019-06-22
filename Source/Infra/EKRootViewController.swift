@@ -129,7 +129,7 @@ class EKRootViewController: UIViewController {
 
         // In case the entry is a view controller, add the entry as child of root
         if let viewController = entryView.content.viewController {
-            addChild(viewController)
+            addChildViewController(viewController)
         }
         
         // Extract the attributes struct

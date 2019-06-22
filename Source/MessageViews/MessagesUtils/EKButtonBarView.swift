@@ -23,7 +23,7 @@ public class EKButtonBarView: UIView {
     private let buttonBarContent: EKProperty.ButtonBarContent
     private let spreadAxis: QLAxis
     private let oppositeAxis: QLAxis
-    private let relativeEdge: NSLayoutConstraint.Attribute
+    private let relativeEdge: NSLayoutAttribute
     
     var bottomCornerRadius: CGFloat = 0 {
         didSet {
@@ -116,8 +116,8 @@ public class EKButtonBarView: UIView {
     private func setupSeperatorView(after view: UIView) {
         let midSepView = UIView()
         addSubview(midSepView)
-        let sepAttribute: NSLayoutConstraint.Attribute
-        let buttonAttribute: NSLayoutConstraint.Attribute
+        let sepAttribute: NSLayoutAttribute
+        let buttonAttribute: NSLayoutAttribute
         switch oppositeAxis {
         case .vertically:
             sepAttribute = .centerX

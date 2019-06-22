@@ -27,7 +27,7 @@ public extension EKAttributes {
         }
         
         /** Visual Effect (Blurred) background style */
-        case visualEffect(style: UIBlurEffect.Style)
+        case visualEffect(style: UIBlurEffectStyle)
         
         /** Color background style */
         case color(color: UIColor)

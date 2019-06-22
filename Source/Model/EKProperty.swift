@@ -80,7 +80,7 @@ public struct EKProperty {
         
         /** Repeated-reversed animation throughout the presentation of an image */
         public enum TransformAnimation {
-            case animate(duration: TimeInterval, options: UIView.AnimationOptions, transform: CGAffineTransform)
+            case animate(duration: TimeInterval, options: UIViewAnimationOptions, transform: CGAffineTransform)
             case none
         }
         
@@ -94,7 +94,7 @@ public struct EKProperty {
         public var size: CGSize?
     
         /** Content mode */
-        public var contentMode: UIView.ContentMode
+        public var contentMode: UIViewContentMode
         
         /** Should the image be rounded */
         public var makesRound: Bool
@@ -102,12 +102,12 @@ public struct EKProperty {
         /** Repeated-Reversed animation */
         public var animation: TransformAnimation
         
-        public init(imageName: String, animation: TransformAnimation = .none, size: CGSize? = nil, contentMode: UIView.ContentMode = .scaleToFill, makesRound: Bool = false) {
+        public init(imageName: String, animation: TransformAnimation = .none, size: CGSize? = nil, contentMode: UIViewContentMode = .scaleToFill, makesRound: Bool = false) {
             let image = UIImage(named: imageName)!
             self.init(image: image, size: size, contentMode: contentMode, makesRound: makesRound)
         }
         
-        public init(image: UIImage, animation: TransformAnimation = .none, size: CGSize? = nil, contentMode: UIView.ContentMode = .scaleToFill, makesRound: Bool = false) {
+        public init(image: UIImage, animation: TransformAnimation = .none, size: CGSize? = nil, contentMode: UIViewContentMode = .scaleToFill, makesRound: Bool = false) {
             self.images = [image]
             self.size = size
             self.contentMode = contentMode
@@ -116,7 +116,7 @@ public struct EKProperty {
             self.imageSequenceAnimationDuration = 0
         }
         
-        public init(images: [UIImage], imageSequenceAnimationDuration: TimeInterval = 1, animation: TransformAnimation = .none, size: CGSize? = nil, contentMode: UIView.ContentMode = .scaleToFill, makesRound: Bool = false) {
+        public init(images: [UIImage], imageSequenceAnimationDuration: TimeInterval = 1, animation: TransformAnimation = .none, size: CGSize? = nil, contentMode: UIViewContentMode = .scaleToFill, makesRound: Bool = false) {
             self.images = images
             self.size = size
             self.contentMode = contentMode
@@ -125,7 +125,7 @@ public struct EKProperty {
             self.imageSequenceAnimationDuration = imageSequenceAnimationDuration
         }
         
-        public init(imagesNames: [String], imageSequenceAnimationDuration: TimeInterval = 1, animation: TransformAnimation = .none, size: CGSize? = nil, contentMode: UIView.ContentMode = .scaleToFill, makesRound: Bool = false) {
+        public init(imagesNames: [String], imageSequenceAnimationDuration: TimeInterval = 1, animation: TransformAnimation = .none, size: CGSize? = nil, contentMode: UIViewContentMode = .scaleToFill, makesRound: Bool = false) {
             let images = imagesNames.map { UIImage(named: $0)! }
             self.init(images: images, imageSequenceAnimationDuration: imageSequenceAnimationDuration, animation: animation, size: size, contentMode: contentMode, makesRound: makesRound)
         }

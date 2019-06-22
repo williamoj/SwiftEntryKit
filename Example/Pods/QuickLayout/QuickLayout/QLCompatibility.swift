@@ -7,8 +7,8 @@
 
 import Foundation
 
-public typealias QLAttribute = NSLayoutConstraint.Attribute
-public typealias QLRelation = NSLayoutConstraint.Relation
+public typealias QLAttribute = NSLayoutAttribute
+public typealias QLRelation = NSLayoutRelation
 
 #if os(OSX)
 import AppKit

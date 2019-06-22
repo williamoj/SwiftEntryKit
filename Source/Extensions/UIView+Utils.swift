@@ -75,7 +75,7 @@ extension UIImageView {
             startAnimating()
             
             if case .animate(duration: let duration, options: let options, transform: let transform) = newValue.animation {
-                let options: UIView.AnimationOptions = [.repeat, .autoreverse, options]
+                let options: UIViewAnimationOptions = [.repeat, .autoreverse, options]
                 // A hack that forces the animation to run on the main thread on one of the next run loops
                 DispatchQueue.main.async {
                     UIView.animate(withDuration: duration, delay: 0, options: options, animations: {
